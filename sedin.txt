@@ -1,0 +1,15 @@
+1. Arjun Singh - HR Department
+2. Priya Sharma - Finance Department
+3. Rahul Kumar - IT Department
+4. Neha Patel - Marketing Department
+5. Vikram Joshi - Finance Department
+6. Sneha Reddy - IT Department
+7. Ramesh Gupta - HR Department
+8. Anita Desai - Marketing Department
+9. Manish Mehta - Finance Department
+10. Shreya Nair - IT Department
+Note: All employees must submit their reports by Friday.
+HR Department meeting scheduled on Monday.
+Finance Department budget review next week.
+IT Department system maintenance on Sunday.
+Marketing Department campaign launch tomorrow.

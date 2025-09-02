@@ -1,0 +1,60 @@
+//Print all lines
+awk '{print}' awk_input.txt
+ 
+//print particular column
+awk -F , '{print $1}' awk_input.txt 
+ 
+//print columns in any order
+awk -F , '{print $2,$4}' awk_input.txt
+awk -F, -v OFS=',' '{print $2,$4}' awk_input.txt 
+ 
+//Print all the details if the department is IT
+awk -F, '$3=="IT" {print}' awk_input.txt 
+ 
+//Salary with more than 6000
+awk -F, '$4>"6000" {print}' awk_input.txt 
+ 
+//Total Salary
+awk -F, '{sum+=$4} END {print "Total Salary:",sum}' awk_input.txt 
+ 
+//Average Salary
+awk -F, '{sum +=$4;count++} END {print "Average Salary:",sum/count}' awk_input.txt 
+ 
+//Max Salary and Name
+awk -F, 'NR==2 {max=$4; maxName=$2} $4>max {max=$4;maxName=$2} END{print "Max Salary:",maxName,max}' awk_input.txt 
+ 
+//Names of people working for more than 5 years
+awk -F, '$5>5 {print $2,$5}' awk_input.txt 
+ 
+//Line number and name
+awk -F, '{print NR,$2}' awk_input.txt 
+ 
+//Count no of people in each department
+awk -F, '{dept[$3]++} END { for (d in dept) print d,dept[d]}' awk_input.txt 
+ 
+//Sorted by salary and print name ans salary 
+sort -t, -k4 -n awk_input.txt | awk -F, '{print $2,$4}' awk_input.txt 
+ 
+//print employee with name starting with 'A'
+awk -F, '$2~/^A/' awk_input.txt 
+ 
+//print emplyee id and uppercase names
+awk -F, '{print $1, toupper($2)}' awk_input.txt 
+ 
+//Replace "Finanace" with "Fin"
+awk -F, '{gsub("Finance","Fin",$3); print $0}' awk_input.txt 
+ 
+//Print employee with salary between 50000 and 60000
+awk -F, -v OFS=',' '$4>=50000 && $4<=60000{print $2,$4}' awk_input.txt 
+ 
+//Print last Field(Years) of each employee
+awk -F, '{print $NF}' awk_input.txt 
+ 
+//Print employee with more than 5 years in IT
+awk -F, '$5>5 && $3=="IT" {print}' awk_input.txt 
+ 
+//print header line only
+head -1 awk_input.txt 
+ 
+//print line number and no of columns in each row
+awk -F, '{print NR,NF}' awk_input.txt 
