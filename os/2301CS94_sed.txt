@@ -1,0 +1,21 @@
+sed '' sed_input.txt
+sed 's/Department/Dept/g' sed_input.txt 
+sed '/Note/d' sed_input.txt 
+sed '1,7s/HR/Human Resources/g' sed_input.txt 
+sed -n '3,6p' sed_input.txt 
+sed '5a\This is a newy inserted line after line 5' sed_input.txt 
+sed 's/$/  -Verified/' sed_input.txt 
+sed 's/Finance/Fin/' sed_input.txt 
+sed '1,2d' sed_input.txt 
+sed -n '/Finance/p' sed_input.txt 
+sed '/Marketing/ s/Marketing Department/\U&/' sed_input.txt 
+sed '4s/Neha Patel/Neha P./' sed_input.txt 
+sed '$d' sed_input.txt 
+sed 's/ - /:/g' sed_input.txt 
+sed '/HR/p' sed_input.txt 
+nl sed_input.txt 
+sed '/^$/d' sed_input.txt 
+sed -n '/Finanace/=' sed_input.txt | sed -n '/Finance/p' sed_input.txt 
+sed 's/^[0-9]\+\. //' sed_input.txt 
+sed -n '/IT/!p' sed_input.txt 
+

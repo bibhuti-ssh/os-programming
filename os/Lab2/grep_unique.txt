@@ -1,0 +1,4 @@
+futex
+lseek
+rt_sigaction
+sigaltstack
